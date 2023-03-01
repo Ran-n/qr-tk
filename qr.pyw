@@ -18,7 +18,7 @@ class QRCodeGenerator:
         self.input_entry2 = tk.Entry(self.input_frame, justify='center', state='disabled', textvariable=tk.StringVar(value="**********"), width=40)
         self.input_entry2.pack(padx=10, side=tk.LEFT)
 
-        self.show_hide_button = tk.Button(self.input_frame, text="Show", command=self.toggle_entry_visibility)
+        self.show_hide_button = tk.Button(self.input_frame, text="👀", command=self.toggle_entry_visibility)
         self.show_hide_button.pack(padx=10, side=tk.RIGHT)
         self.input_entry.bind('<KeyRelease>', self.generate_qr_code)
 
@@ -48,11 +48,11 @@ class QRCodeGenerator:
         if self.input_entry.winfo_ismapped():
             self.input_entry.pack_forget()
             self.input_entry2.pack(padx=10, side=tk.LEFT)
-            self.show_hide_button.config(text="Show")
+            self.show_hide_button.config(text="👀")
         else:
             self.input_entry2.pack_forget()
             self.input_entry.pack(padx=10, side=tk.LEFT)
-            self.show_hide_button.config(text="Hide")
+            self.show_hide_button.config(text="🙈")
 
 def run():
     root = tk.Tk()
